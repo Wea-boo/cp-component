@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+
+* {
+  border: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.profile-pic{
+  
+  -webkit-animation: squaretocircle 1.5s;
+  animation: squaretocircle 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-pic:hover{
+  -webkit-animation: circletosquare 1.5s;
+  animation: circletosquare 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;  
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes circletosquare{
+  0% {clip-path: circle(70.7% at 50% 50%);}
+  100% {clip-path: circle(50.0% at 50% 50%); }
+}
+@-webkit-keyframes circletosquare{
+  0% {clip-path: circle(70.7% at 50% 50%);}
+  100% {clip-path: circle(50.0% at 50% 50%); } 
+}
+@keyframes squaretocircle{
+  0% {clip-path: circle(50.0% at 50% 50%);}
+  100% {clip-path: circle(70.7% at 50% 50%); } 
+}
+@-webkit-keyframes squaretocircle{
+  0% {clip-path: circle(50.0% at 50% 50%);}
+  100% {clip-path: circle(70.7% at 50% 50%); } 
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mini-profile-pic{
+  clip-path: circle(50.0% at 50% 50%);
 }
